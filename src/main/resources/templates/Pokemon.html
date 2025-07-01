@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pokémon Card</title>
+    <style>
+        .card {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: auto;
+        }
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2 th:text="${pokemon.name}">Pokémon Name</h2>
+    <img th:src="${pokemon.sprites.front_default}" alt="Image"/>
+    <p><strong>Height:</strong> <span th:text="${pokemon.height}"></span></p>
+    <p><strong>Weight:</strong> <span th:text="${pokemon.weight}"></span></p>
+</div>
+</body>
+</html>
